@@ -1,2 +1,3 @@
 # todolist-sui
-projeto sibmetido no mvr
+projeto submetido no mvr para obtenção de certificado no bootcamp sui Brasil
+

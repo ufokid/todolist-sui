@@ -1,0 +1,41 @@
+[package]
+name = "todolist"
+version = "0.1.0"
+edition = "2024.beta" # edition = "legacy" to use legacy (pre-2024) Move
+description = "Pacote Move simples que implementa uma TodoList para Sui DevNet"
+authors = ["ufokid <elitonjipa3@gmail.com>"]
+license = "MIT"
+
+[dependencies]
+# Nenhuma dependência externa necessária. Se precisar referenciar pacotes
+# locais ou remotos, adicione aqui, por exemplo:
+# MoveStdlib = { git = "https://github.com/diem/move.git", subdir = "language/move-stdlib", rev = "main" }
+
+# Exemplo de dependência local (descomente e ajuste o caminho se necessário):
+# Bridge = { local = "./dependencies/Bridge" }
+
+[addresses]
+# Endereços nomeados para usar no código Move com `@name`.
+# Mantenha `todolist = "0x0"` para que o endereço seja substituído em release/publish.
+# Adicione aliases comuns para facilitar testes locais/devnet.
+todolist = "0x0"
+std = "0x1"
+sui = "0x2"
+
+[dev-dependencies]
+# Dependências específicas para testes ou modo `--dev`.
+# Exemplo (descomente e ajuste quando necessário):
+# TestHelpers = { local = "../test-helpers" }
+
+[dev-addresses]
+# Endereços usados apenas em `--test` ou `--dev`.
+# Use endereços curinga para testes locais, ex:
+alice = "0xA11CE"
+bob = "0xB0B"
+
+# Notas:
+# - Ajuste `std` / `sui` conforme o mapeamento de endereços da rede alvo antes
+#   de publicar (ex.: DevNet vs MainNet). Em pipelines de CI ou no `sui client publish`
+#   frequentemente você sobrescreve os endereços com `--override` ou via `dev-addresses`.
+# - Se preferir não incluir `std`/`sui` aqui, remova as linhas; mantive-as como
+#   placeholders úteis para desenvolvimento.
